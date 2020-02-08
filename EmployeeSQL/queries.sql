@@ -30,3 +30,9 @@ from empdept ed
 		join employees e
 		on e.id = ed.emp_id
 		ORDER BY e.id
+		
+-- 5) List all employees with first name Hercules and last name starting w/ B
+
+select first_name, last_name, "id"
+	from employees
+	where first_name = 'Hercules' and last_name like 'B%'
