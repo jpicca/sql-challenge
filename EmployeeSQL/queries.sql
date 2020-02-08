@@ -58,3 +58,10 @@ from employees e
 		on ed.dept_id = d.id
 		where d.name = 'Sales' or d.name = 'Development'
 		order by e.id;
+		
+-- 8) In desc order, list frequency count of employee last names
+
+select COUNT(last_name) as lastNameCount, last_name
+from employees
+group by last_name
+order by lastNameCount DESC
