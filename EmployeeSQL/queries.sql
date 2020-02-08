@@ -47,3 +47,14 @@ from employees e
 		on ed.dept_id = d.id
 		where d.name = 'Sales'
 		order by e.id;
+		
+-- 7) List all employees in Sales and Development depts, plus associated data
+
+select e.id, e.last_name, e.first_name, d.name
+from employees e
+	join empdept ed
+	on e.id = ed.emp_id
+		join departments d
+		on ed.dept_id = d.id
+		where d.name = 'Sales' or d.name = 'Development'
+		order by e.id;
