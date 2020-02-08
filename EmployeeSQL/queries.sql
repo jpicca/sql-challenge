@@ -11,5 +11,14 @@ select e.id, e.first_name, e.last_name, e.hire_date
 from employees e
 	where extract(year from hire_date) = 1986
 
+-- 3) List the manager of every department, as well as associated data
 
-select * from employees
+select md.emp_id, e.first_name, e.last_name, d.name, md.dept_id, 
+		md.from_date, md.to_date
+from mandept md
+	join departments d
+	on d.id = md.dept_id
+		join employees e
+		on e.id = md.emp_id
+
+select * from departments
