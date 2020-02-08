@@ -21,4 +21,12 @@ from mandept md
 		join employees e
 		on e.id = md.emp_id
 
-select * from departments
+-- 4) List the department of each employee, as well as associated data
+
+select e.id, e.first_name, e.last_name, d.name
+from empdept ed
+	join departments d
+	on d.id = ed.dept_id
+		join employees e
+		on e.id = ed.emp_id
+		ORDER BY e.id
