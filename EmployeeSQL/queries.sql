@@ -36,3 +36,14 @@ from empdept ed
 select first_name, last_name, "id"
 	from employees
 	where first_name = 'Hercules' and last_name like 'B%'
+	
+-- 6) List all sales dept employees, along with associated data
+
+select e.id, e.last_name, e.first_name, d.name
+from employees e
+	join empdept ed
+	on e.id = ed.emp_id
+		join departments d
+		on ed.dept_id = d.id
+		where d.name = 'Sales'
+		order by e.id;
