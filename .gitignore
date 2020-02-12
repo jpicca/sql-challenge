@@ -1,2 +1,5 @@
 # Don't upload data files
 EmployeeSQL/data
+
+# No need to upload ipynb checkpoints
+EmployeeSQL/.ipynb_checkpoints/
