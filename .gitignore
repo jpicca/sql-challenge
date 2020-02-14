@@ -3,3 +3,8 @@ EmployeeSQL/data
 
 # No need to upload ipynb checkpoints
 EmployeeSQL/.ipynb_checkpoints/
+
+# Don't upload the config file
+config.py
+
+EmployeeSQL/__pycache__/
